@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/david-blanchard/guess-game/go/grpc/protos/golang/discounts"
+	"github.com/david-blanchard/go-grpc/protos/golang/discounts"
 	"google.golang.org/grpc"
 	"log"
 	"net"

@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/david-blanchard/guess-game/go/grpc/protos/golang/discounts"
-	"github.com/david-blanchard/guess-game/go/grpc/protos/golang/payments"
+	"github.com/david-blanchard/go-grpc/protos/golang/discounts"
+	"github.com/david-blanchard/go-grpc/protos/golang/payments"
 	"google.golang.org/genproto/googleapis/rpc/errdetails"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

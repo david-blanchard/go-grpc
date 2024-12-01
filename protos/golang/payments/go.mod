@@ -1,4 +1,4 @@
-module github.com/david-blanchard/guess-game/go/grpc/protos/golang/payments
+module github.com/david-blanchard/go-grpc/protos/golang/payments
 
 go 1.22.5
 

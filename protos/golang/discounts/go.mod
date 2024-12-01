@@ -1,4 +1,4 @@
-module github.com/david-blanchard/guess-game/go/grpc/protos/golang/discounts
+module github.com/david-blanchard/go-grpc/protos/golang/discounts
 
 go 1.22.5
 
