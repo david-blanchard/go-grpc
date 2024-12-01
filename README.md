@@ -1,2 +1,3 @@
-# go-ddd
-Udemy DDD tutorial in Golang
+# go-grpc
+
+Udemy DDD tutorial in Golang implementign GRPC.
