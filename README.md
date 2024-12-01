@@ -1,9 +1,4 @@
-# go-grpc
-
-Udemy DDD tutorial in Golang implementing GRPC.
-
-
-## Intro
+# Intro
 
 gRPC is a modern, lightweight communication protocol and high-performance RPC framework introduced by Google. It can efficiently connect services in a microservices environment
 with built-in support for load balancing, tracing, health checking, and authentication. gRPC provides easy to use and efficient communication using protocol buffers,
@@ -94,8 +89,8 @@ git tag protos/golang/orders/v0.0.2
 git push origin protos/golang/orders/v0.0.2
 ```
 
-And under protos/golang/orders go mod should be created. Also the repo requires that
-will do the following
+And under protos/golang/orders go mod should be created. Also the repo requires that 
+will do the following 
 
 ```
 go get github.com/fmo/grpc/protos/golang/orders@v0.0.2
