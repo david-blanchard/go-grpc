@@ -110,6 +110,8 @@ This is mainly called as Unary RPC. (The simplest type where the client sends a 
 
 ## To tag sub golang module
 
+Tag each module like that
+
 ```
 git tag protos/golang/orders/v0.0.2
 git push origin protos/golang/orders/v0.0.2
