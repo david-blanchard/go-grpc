@@ -38,7 +38,7 @@ protoc --version
 ## Golang Specific Installations
 
 ```
-go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-geo@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```
 
@@ -68,6 +68,32 @@ protoc \
     ./payment.proto
 ```
 
+```
+protoc \
+    --go_out=./golang/discount \
+    --go_opt=paths=source_relative \
+    --go-grpc_out=./golang/payments \
+    --go-grpc_opt=paths=source_relative \
+    ./discount.proto
+```
+
+Go to each directory and execute
+
+```
+go mod init github.com/david-blanchard/go-grpc/discounts
+go mod tidy
+```
+
+```
+go mod init github.com/david-blanchard/go-grpc/orders
+go mod tidy
+```
+
+```
+go mod init github.com/david-blanchard/go-grpc/payments
+go mod tidy
+```
+
 This is mainly called as Unary RPC. (The simplest type where the client sends a single request and gets a single response from the server.)
 
 ## To call the order service
@@ -93,5 +119,5 @@ And under protos/golang/orders go mod should be created. Also the repo requires 
 will do the following 
 
 ```
-go get github.com/fmo/grpc/protos/golang/orders@v0.0.2
+go get github.com/david-blanchard/go-grpc/protos/golang/orders@v0.0.2
 ```
