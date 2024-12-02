@@ -1,4 +1,4 @@
-module github.com/david-blanchard/go-grpc/orders
+module github.com/david-blanchard/go-grpc/protos/golang/orders
 
 go 1.23.3
 

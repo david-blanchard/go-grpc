@@ -1,4 +1,4 @@
-module github.com/david-blanchard/go-grpc/payments
+module github.com/david-blanchard/go-grpc/protos/golang/payments
 
 go 1.23.3
 

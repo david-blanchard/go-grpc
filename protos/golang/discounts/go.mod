@@ -1,4 +1,4 @@
-module github.com/david-blanchard/go-grpc/discounts
+module github.com/david-blanchard/go-grpc/protos/golang/discounts
 
 go 1.23.3
 
