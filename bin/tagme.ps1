@@ -10,6 +10,8 @@ param(
     [string] $DELETE
 )
 
+$PROTOS_PATH = protos/golang/$TARGET
+
 if([string]::IsNullOrEmpty($TARGET)) {
     Write-Host "Target is missing."
     exit 1
@@ -20,15 +22,20 @@ if([string]::IsNullOrEmpty($VERSION)) {
     exit 1
 }
 
-cd protos/golang/$TARGET
-
-if($DELETE -eq 'delete') {
-    git tag --delete  protos/golang/$TARGET/$VERSION
-    git push -d origin protos/golang/$TARGET/$VERSION
+if (!(Test-Path $PROTOS_PATH)) {
+    Write-Host "Path not found."
+    exit 1
 }
 
-git tag protos/golang/$TARGET/$VERSION
-git push origin protos/golang/$TARGET/$VERSION
+cd $PROTOS_PATH
+
+if($DELETE -eq 'delete') {
+    git tag --delete  $PROTOS_PATH/$VERSION
+    git push -d origin $PROTOS_PATH/$VERSION
+}
+
+git tag $PROTOS_PATH/$VERSION
+git push origin $PROTOS_PATH/$VERSION
 
 cd ..\..\..
 
